@@ -1,5 +1,5 @@
 SUBDIRS := $(wildcard *-example/)
-TARGETS := all clean
+TARGETS := all clean test
 
 BUILD := `npm bin`/webpack
 CLEAN := touch dist && rm -r dist
@@ -14,6 +14,9 @@ all : $(BUILD_TARGETS)
 
 clean : $(CLEAN_TARGETS)
 	@echo 'Done "$@" target'
+
+test :
+	npm test
 
 # $(@D) is SUBDIR name
 $(BUILD_TARGETS) :
