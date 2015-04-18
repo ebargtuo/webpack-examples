@@ -3,7 +3,7 @@ TARGETS := all clean test
 
 BUILD := `npm bin`/webpack
 CLEAN := touch dist && rm -r dist
-ACCEPTANCE_TEST := PATH=`npm bin`:$$PATH node test/acceptance/webdriver.js
+ACCEPTANCE_TEST := PATH=`npm bin`:$$PATH mocha
 
 BUILD_TARGETS := $(addsuffix all,$(SUBDIRS))
 CLEAN_TARGETS := $(addsuffix clean,$(SUBDIRS))
