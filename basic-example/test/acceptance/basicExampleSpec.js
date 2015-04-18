@@ -9,8 +9,10 @@ var serveStatic = require("serve-static");
 
 var webdriver = require("selenium-webdriver");
 var tst = require("selenium-webdriver/testing");
-var By = require("selenium-webdriver").By;
-var assert = require("assert");
+
+var chai = require("chai");
+var expect = chai.expect;
+var chaiWebdriver = require("chai-webdriver");
 
 tst.describe("webpack basic example", function() {
     var driver, server;
@@ -26,6 +28,8 @@ tst.describe("webpack basic example", function() {
         driver = new webdriver.Builder()
             .forBrowser("phantomjs")
             .build();
+
+        chai.use(chaiWebdriver(driver));
     });
 
     tst.after(function() {
@@ -41,14 +45,12 @@ tst.describe("webpack basic example", function() {
 
         tst.it("should have the right title", function() {
             driver.getTitle().then(function(title) {
-                assert.equal("Webpack Examples | Basic", title);
+                expect(title).to.equal("Webpack Examples | Basic");
             });
         });
 
         tst.it("should have the right main heading", function() {
-            driver.findElement(By.tagName("h1")).getText().then(function(text) {
-                assert.equal("Hello webpack!", text);
-            });
+            expect("h1").dom.to.have.text("Hello webpack!");
         });
     });
 
