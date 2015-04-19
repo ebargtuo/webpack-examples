@@ -19,6 +19,17 @@ var expectedFilesInDistDirs = [
             "js/",
                 "js/main.js",
         ]
+    },
+    {
+        dir: "basic-with-require-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
     }
 
 ];
