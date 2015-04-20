@@ -30,6 +30,17 @@ var expectedFilesInDistDirs = [
             "js/",
                 "js/main.js",
         ]
+    },
+    {
+        dir: "js-hint-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
     }
 
 ];

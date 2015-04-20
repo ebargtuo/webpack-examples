@@ -24,6 +24,8 @@
     "morgan": "~1.5.2",
     "serve-static": "~1.9.2",
     "chai": "~2.2.0",
-    "chai-webdriver": "~1.1.1"
+    "chai-webdriver": "~1.1.1",
+    "jshint": "~2.7.0",
+    "jshint-loader": "~0.8.3"
   }
 }
