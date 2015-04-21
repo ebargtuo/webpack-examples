@@ -26,6 +26,8 @@
     "chai": "~2.2.0",
     "chai-webdriver": "~1.1.1",
     "jshint": "~2.7.0",
-    "jshint-loader": "~0.8.3"
+    "jshint-loader": "~0.8.3",
+    "jscs": "~1.13.1",
+    "jscs-loader": "0.0.5"
   }
 }
