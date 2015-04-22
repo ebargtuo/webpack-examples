@@ -7,7 +7,7 @@ var tst = require(commonBaseDir + "common/test/webdriverTestHelper");
 
 var expect = require("chai").expect;
 
-tst.bootstrap(dirs.dist);
+tst.bootstrap({root: dirs.dist});
 
 tst.describe("webpack basic example", function() {
 

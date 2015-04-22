@@ -23,6 +23,8 @@ testing.withConnectServer = function(root, port) {
 
         server = http.createServer(app);
         server.listen(port);
+
+        console.info('Started server on "http://0.0.0.0:' + port + '" at root "' + root + '"');
     });
 
     testing.after(function() {
@@ -57,9 +59,17 @@ testing.withChaiWebDriver = function() {
     return testing;
 };
 
-testing.bootstrap = function(root) {
+testing.bootstrap = function(opts) {
     if (!isBootstrapped) {
-        testing.withConnectServer(root).withPhantomJsDriver().withChaiWebDriver();
+        if (false !== opts.withConnectServer) {
+            testing.withConnectServer(opts.root);
+        }
+        if (false !== opts.withPhantomJsDriver) {
+            testing.withPhantomJsDriver();
+        }
+        if (false !== opts.withChaiWebDriver) {
+            testing.withChaiWebDriver();
+        }
         isBootstrapped = true;
     }
 };
