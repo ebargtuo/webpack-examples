@@ -1,13 +1,16 @@
 "use strict";
 
 var commonBaseDir = "../../../";
-var dirs = require(commonBaseDir + "package.json").projectConfig.dirs;
 
 var tst = require(commonBaseDir + "common/test/webdriverTestHelper");
+var webpackDevServer = require(commonBaseDir + "common/test/webpackDevServerHelper");
+var webpackConfig = require("../../webpack.config.js");
 
 var expect = require("chai").expect;
 
-tst.bootstrap({root: dirs.dist});
+webpackDevServer.start(webpackConfig);
+
+tst.bootstrap({withConnectServer: false});
 
 tst.describe("webpack basic example", function() {
 
