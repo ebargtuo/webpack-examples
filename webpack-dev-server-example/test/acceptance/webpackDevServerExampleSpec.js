@@ -30,4 +30,20 @@ tst.describe("webpack basic example", function() {
         });
     });
 
+    tst.describe("/webpack-dev-server/", function() {
+        tst.before(function() {
+            this.driver.get("http://localhost:5000/webpack-dev-server/");
+        });
+
+        tst.it("should have the webpack ok status", function() {
+            expect("#status").dom.to.have.text("App ready.");
+        });
+
+        tst.it("should have the right main heading", function() {
+            this.driver.switchTo().frame("iframe");
+            expect("h1").dom.to.have.text("Hello webpack dev server!");
+            this.driver.switchTo().defaultContent();
+        });
+    });
+
 });
