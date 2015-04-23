@@ -43,6 +43,28 @@ var expectedFilesInDistDirs = [
             "js/",
                 "js/main.js",
         ]
+    },
+    {
+        dir: "jscs-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
+    },
+    {
+        dir: "webpack-dev-server-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
     }
 
 ];
