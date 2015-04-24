@@ -65,6 +65,17 @@ var expectedFilesInDistDirs = [
             "js/",
                 "js/main.js",
         ]
+    },
+    {
+        dir: "jsx-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
     }
 
 ];
