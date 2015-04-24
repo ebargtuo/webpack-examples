@@ -1,5 +1,6 @@
 "use strict";
 
+require("../../../common/es5BindShim");
 var React = require("react");
 var HelloJSX = require("./helloJSX");
 
