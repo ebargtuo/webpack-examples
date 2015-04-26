@@ -33,6 +33,7 @@
     "jscs": "~1.13.1",
     "jscs-loader": "0.0.5",
     "webpack-dev-server": "~1.8.2",
-    "jsx-loader": "~0.13.1"
+    "jsx-loader": "~0.13.1",
+    "imports-loader": "~0.6.3"
   }
 }
