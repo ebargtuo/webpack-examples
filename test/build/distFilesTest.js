@@ -87,6 +87,17 @@ var expectedFilesInDistDirs = [
             "js/",
                 "js/main.js",
         ]
+    },
+    {
+        dir: "html-plugin-example",
+
+        files: [
+
+            "index.html",
+
+            "js/",
+                "js/main.js",
+        ]
     }
 
 ];
