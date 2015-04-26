@@ -9,95 +9,46 @@ var path = require("path");
 var pkg = require("./../../package.json");
 var dirs = pkg.projectConfig.dirs;
 
+var defaultExpectedFiles = [
+    "index.html",
+
+    "js/",
+        "js/main.js",
+];
+
 var expectedFilesInDistDirs = [
 
     {
         dir: "basic-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "basic-with-require-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "js-hint-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "jscs-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "webpack-dev-server-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "jsx-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "jsx-imports-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     },
     {
         dir: "html-plugin-example",
-
-        files: [
-
-            "index.html",
-
-            "js/",
-                "js/main.js",
-        ]
+        files: defaultExpectedFiles
     }
 
 ];
