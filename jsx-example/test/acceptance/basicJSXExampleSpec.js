@@ -9,7 +9,7 @@ var expect = require("chai").expect;
 
 tst.bootstrap({root: dirs.dist});
 
-tst.describe("webpack basic example", function() {
+tst.describe("webpack basic jsx example", function() {
 
     tst.describe("index page", function() {
         tst.before(function() {
