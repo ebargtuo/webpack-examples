@@ -49,6 +49,10 @@ var expectedFilesInDistDirs = [
     {
         dir: "html-plugin-example",
         files: defaultExpectedFiles
+    },
+    {
+        dir: "style-css-inline-example",
+        files: defaultExpectedFiles
     }
 
 ];
