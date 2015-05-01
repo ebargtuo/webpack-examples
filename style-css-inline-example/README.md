@@ -1,4 +1,4 @@
-# Webpack Style and CSS Example
+# Webpack Style and CSS (Inline) Example
 
 A simple webpack [stylesheet](https://webpack.github.io/docs/stylesheets.html)
 example with the [style](https://github.com/webpack/style-loader) and

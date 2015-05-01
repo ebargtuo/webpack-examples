@@ -1,4 +1,4 @@
-# Basic Webpack Dev Server Example
+# Basic Example with HTML Plugin
 
 A simple webpack example with the HTML plugin to generate the index.html file.
 

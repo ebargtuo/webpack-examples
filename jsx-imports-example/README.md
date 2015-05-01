@@ -1,4 +1,4 @@
-# Basic Example With JSHint
+# Basic Example With JSX and Imports Loader
 
 A simple webpack example with React JSX compilation using the
 [jsx loader](https://github.com/petehunt/jsx-loader) in a preloader step.
