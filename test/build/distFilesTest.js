@@ -53,6 +53,13 @@ var expectedFilesInDistDirs = [
     {
         dir: "style-css-inline-example",
         files: defaultExpectedFiles
+    },
+    {
+        dir: "style-css-link-example",
+        files: defaultExpectedFiles.concat([
+            "css/",
+            /css\/[a-zA-Z0-9]+\.css/
+        ])
     }
 
 ];
@@ -67,16 +74,17 @@ function checkFiles(directory, expectedFiles) {
         dot: true,      // include hidden files
         mark: true      // add a `/` character to directory matches
     });
+    var filesAsString = files.join("|");
 
     // Check if all expected files are present in the
     // specified directory, and are of the expected type
     expectedFiles.forEach(function(file) {
 
         var ok = false;
-        var expectedFileType = "/" !== file.slice(-1) ? "regular file" : "directory";
 
         // If file exists
         if (files.indexOf(file) !== -1) {
+            var expectedFileType = "/" !== file.slice(-1) ? "regular file" : "directory";
 
             // Check if the file is of the correct type
             if ("/" !== file.slice(-1)) {
@@ -89,9 +97,19 @@ function checkFiles(directory, expectedFiles) {
                 ok = "/" === files[files.indexOf(file)].slice(-1);
             }
 
+            it('"' + file + '" should be present and should be a ' + expectedFileType, function() {
+                assert.equal(true, ok);
+            });
+
+            return;
+
+        } else if ("[object RegExp]" === Object.prototype.toString.call(file)) {
+            ok = file.test(filesAsString);
+            // remove matches to avoid the non-found rule
+            filesAsString = filesAsString.replace(file, "");
         }
 
-        it('"' + file + '" should be present and it should be a ' + expectedFileType, function() {
+        it('"' + file + '" should be present', function() {
             assert.equal(true, ok);
         });
 
@@ -99,8 +117,8 @@ function checkFiles(directory, expectedFiles) {
 
     // List all files that should be NOT
     // be present in the specified directory
-    (files.filter(function(file) {
-        return expectedFiles.indexOf(file) === -1;
+    (filesAsString.split("|").filter(function(file) {
+        return "" !== file && expectedFiles.indexOf(file) === -1;
     })).forEach(function(file) {
         it('"' + file + '" should NOT be present', function() {
             assert(false);
