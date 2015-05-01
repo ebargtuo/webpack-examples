@@ -28,6 +28,12 @@ tst.describe("webpack style and CSS inline example", function() {
         tst.it("should have the right main heading", function() {
             expect("h1").dom.to.have.text("Hello webpack style and CSS loaders!");
         });
+
+        tst.it("should have inline style", function() {
+            this.driver.getPageSource().then(function(content) {
+                expect(content).to.match(/<style[\s\S]*background-color[\s\S]*<\/style>/i);
+            });
+        });
     });
 
     tst.describe("/webpack-dev-server/", function() {
