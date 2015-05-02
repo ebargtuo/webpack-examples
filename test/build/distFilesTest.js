@@ -58,8 +58,17 @@ var expectedFilesInDistDirs = [
         dir: "style-css-link-example",
         files: defaultExpectedFiles.concat([
             "css/",
-            /css\/[a-zA-Z0-9]+\.css/
+                /css\/[a-zA-Z0-9]+\.css/
         ])
+    },
+    {
+        dir: "html-plugin-with-hashes-example",
+        files: [
+            "index.html",
+
+            "js/",
+                /js\/main-[a-zA-Z0-9]+\.js/,
+        ]
     }
 
 ];
