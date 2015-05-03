@@ -1,5 +1,7 @@
 # Webpack Examples
 
+[![Build Status](https://travis-ci.org/ebargtuo/webpack-examples.svg?branch=master)](https://travis-ci.org/ebargtuo/webpack-examples)
+
 Examples of how to use [webpack](https://github.com/webpack/webpack) and various
 webpack addons.
 
