@@ -15,7 +15,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: "style/url!file?context=src&name=[path][hash].[ext]"
+                loader: "style/url!file?context=" + dirs.src + "&name=[path][hash].[ext]"
             }
         ]
     },
