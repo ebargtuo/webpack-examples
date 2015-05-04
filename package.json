@@ -39,6 +39,8 @@
     "css-loader": "~0.12.0",
     "style-loader": "~0.12.1",
     "file-loader": "~0.8.1",
-    "glob": "~5.0.5"
+    "glob": "~5.0.5",
+    "coffee-script": "~1.9.2",
+    "coffee-loader": "~0.7.2"
   }
 }

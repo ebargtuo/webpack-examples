@@ -69,6 +69,15 @@ var expectedFilesInDistDirs = [
             "js/",
                 /js\/main-[a-zA-Z0-9]+\.js/,
         ]
+    },
+    {
+        dir: "coffeescript-example",
+        files: [
+            "index.html",
+
+            "js/",
+                /js\/main-[a-zA-Z0-9]+\.js/,
+        ]
     }
 
 ];
