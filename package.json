@@ -41,6 +41,7 @@
     "file-loader": "~0.8.1",
     "glob": "~5.0.5",
     "coffee-script": "~1.9.2",
-    "coffee-loader": "~0.7.2"
+    "coffee-loader": "~0.7.2",
+    "ts-loader": "~0.3.4"
   }
 }
