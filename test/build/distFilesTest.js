@@ -16,6 +16,13 @@ var defaultExpectedFiles = [
         "js/main.js",
 ];
 
+var defaultExpectedFilesWithHashedJs = [
+    "index.html",
+
+    "js/",
+        /js\/main-[a-zA-Z0-9]+\.js/,
+];
+
 var expectedFilesInDistDirs = [
 
     {
@@ -63,30 +70,15 @@ var expectedFilesInDistDirs = [
     },
     {
         dir: "html-plugin-with-hashes-example",
-        files: [
-            "index.html",
-
-            "js/",
-                /js\/main-[a-zA-Z0-9]+\.js/,
-        ]
+        files: defaultExpectedFilesWithHashedJs
     },
     {
         dir: "coffeescript-example",
-        files: [
-            "index.html",
-
-            "js/",
-                /js\/main-[a-zA-Z0-9]+\.js/,
-        ]
+        files: defaultExpectedFilesWithHashedJs
     },
     {
         dir: "typescript-example",
-        files: [
-            "index.html",
-
-            "js/",
-                /js\/main-[a-zA-Z0-9]+\.js/,
-        ]
+        files: defaultExpectedFilesWithHashedJs
     }
 
 ];
